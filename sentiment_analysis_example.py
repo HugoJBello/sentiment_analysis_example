@@ -28,6 +28,7 @@ dataset = ["Food is good and not too expensive. Serving is just right for adult.
            ]
 
 nltk_results = [nltk_sentiment(row) for row in dataset]
+print(nltk_results);
 results_df = pd.DataFrame(nltk_results)
 text_df = pd.DataFrame(dataset, columns = ['text'])
 nltk_df = text_df.join(results_df)
